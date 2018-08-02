@@ -4,3 +4,13 @@ ORCID member institutions are increasingly interested in identifying ORCID iD ho
 Search for ORCID iDs and retreive associated user names from the [ORCID](https://orcid.org/) registry using the public client API. 
 
 Before using this tool, please refer to the [Public Client API terms of service](https://orcid.org/content/orcid-public-client-terms-service).
+
+## How it works
+Functions in this module are: `serachORCID(searchterm, ringgold = False, email = False)` and `match_names(filepath)`. If run from command line, only parameters for the searchORCID function have to be provided.
+
+The tool works in stages:
+1. Use the search term, provided as a quoted string, and search the ORCID registry using the Public Client API for matching ORCID iDs. Ringgold IDs or email domains can be used as search terms. In these cases, add `ringgold = True` or `email = True` as parameters respectively. A comma separated list of resulting ORCID iDs is saved in a txt file to the working directory.
+2. The total number of ORID iDs found for the search is printed to the command line.
+3. Search the ORCID registry for names assoicated with a comma separated list of ORCID iDs provided in a .txt file at `filepath`. All matched ORCID iDs and names are saved to a csv file in the working directory.
+
+Note: If the search is done to identify ORCID iD holders in your organisation, it is advisable to run the functions manually in the python shell. This way, it is possible to reduce the number of ORCID iDs to be used for the query in step 3 by removing ORCID iDs for which there is already a record in your system. Once done, save the new comma separated txt file in the working directory and run `match_names("YOUR_NEW_FILE_NAME.txt")`.
