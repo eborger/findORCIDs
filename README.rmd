@@ -1,0 +1,5 @@
+# ORCID iDs and names by keyword search
+ORCID member institutions are increasingly interested to identify ORCID iD holders at their institution in order to tailor advocacy and support. This tool allows them to do this in an automated way.
+Search for ORCID iDs and retreive associatted user names from the [ORCID](https://orcid.org/) registry using the public client API. 
+
+Before using this tool, please refer to the [Public Client API terms of service](https://orcid.org/content/orcid-public-client-terms-service).
