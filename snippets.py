@@ -29,7 +29,7 @@ def combine_xml_files(files):
         return first #ElementTree.tostring(first).decode("utf-8") for printing to console
 
 ##load the xml data into one element
-path = r'C:\Users\eb427\Documents\ORCID\ORCID-APIsearch\20180711'
+path = r'[patj]'
 files = getfiles(path)
 output = combine_xml_files(files)
 
